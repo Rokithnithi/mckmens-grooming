@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mckingstown | Classic Men's Grooming Lounge</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --brass: #c5a059;
+      --brass-hover: #dfb76c;
+      --leather: #1c1512;
+      --charcoal: #0c0a09;
+      --panel: #14100e;
+      --panel-border: #2e241e;
+      --text-cream: #f5efe6;
+      --text-muted: #a39587;
+      --whatsapp: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--charcoal);
+      color: var(--text-cream);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem;
+      line-height: 1.6;
+      background-image: 
+        radial-gradient(ellipse at 50% 0%, rgba(197, 160, 89, 0.08) 0%, transparent 70%),
+        repeating-linear-gradient(rgba(255, 255, 255, 0.01) 0px, transparent 1px, transparent 2px, rgba(255, 255, 255, 0.01) 3px);
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(12, 10, 9, 0.95);
+      border-bottom: 1px solid var(--panel-border);
+      backdrop-filter: blur(8px);
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 1.25rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      text-align: left;
+    }
+
+    .brand-title {
+      font-family: 'Cinzel', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      color: var(--brass);
+      text-transform: uppercase;
+      display: block;
+    }
+
+    .brand-subtitle {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      display: block;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: transparent;
+      color: var(--brass);
+      border: 1px solid var(--brass);
+      padding: 0.65rem 1.4rem;
+      border-radius: 4px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-btn:hover {
+      background: var(--brass);
+      color: var(--charcoal);
+      box-shadow: 0 0 20px rgba(197, 160, 89, 0.3);
+    }
+
+    .hero {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 6rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .ornament {
+      color: var(--brass);
+      font-size: 1.25rem;
+      letter-spacing: 0.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+
+    .hero h1 {
+      font-family: 'Cinzel', serif;
+      font-size: 3.4rem;
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: 0.05em;
+      margin-bottom: 1.5rem;
+      color: #fff;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+    }
+
+    .hero p {
+      font-size: 1.35rem;
+      color: var(--text-muted);
+      max-width: 680px;
+      margin: 0 auto 2.5rem;
+      font-style: italic;
+    }
+
+    .gold-divider {
+      width: 120px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--brass), transparent);
+      margin: 2rem auto;
+    }
+
+    .ambiance-banner {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      max-width: 1100px;
+      margin: 0 auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .ambiance-box {
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      padding: 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .ambiance-box::before {
+      content: "";
+      position: absolute;
+      top: 4px; left: 4px; right: 4px; bottom: 4px;
+      border: 1px solid rgba(197, 160, 89, 0.15);
+      pointer-events: none;
+    }
+
+    .ambiance-box h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      color: var(--brass);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.05em;
+    }
+
+    .ambiance-box p {
+      font-size: 1rem;
+      color: var(--text-muted);
+    }
+
+    .menu-section {
+      max-width: 1000px;
+      margin: 0 auto 5rem;
+      padding: 0 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-header h2 {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      letter-spacing: 0.1em;
+      color: #fff;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      border-bottom: 1px dashed var(--panel-border);
+      padding-bottom: 1rem;
+    }
+
+    .menu-line {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.35rem;
+    }
+
+    .item-name {
+      font-family: 'Cinzel', serif;
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--text-cream);
+    }
+
+    .item-price {
+      font-family: 'Cinzel', serif;
+      font-size: 1.15rem;
+      color: var(--brass);
+      font-weight: 700;
+    }
+
+    .item-desc {
+      font-size: 1rem;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    .lounge-card {
+      max-width: 1000px;
+      margin: 0 auto 5rem;
+      background: var(--panel);
+      border: 1px solid var(--panel-border);
+      padding: 3.5rem;
+      position: relative;
+    }
+
+    .lounge-card::after {
+      content: "";
+      position: absolute;
+      top: 8px; left: 8px; right: 8px; bottom: 8px;
+      border: 1px solid rgba(197, 160, 89, 0.2);
+      pointer-events: none;
+    }
+
+    .lounge-content {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+    }
+
+    .lounge-info h3 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.8rem;
+      color: var(--brass);
+      margin-bottom: 1.5rem;
+    }
+
+    .detail-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .detail-label {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--brass);
+      display: block;
+    }
+
+    .detail-val {
+      font-size: 1.15rem;
+      color: var(--text-cream);
+    }
+
+    .reserve-cta {
+      text-align: center;
+      background: rgba(12, 10, 9, 0.6);
+      padding: 2.5rem 1.5rem;
+      border: 1px solid var(--panel-border);
+    }
+
+    .reserve-cta h4 {
+      font-family: 'Cinzel', serif;
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .reserve-cta p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.75rem;
+    }
+
+    footer {
+      border-top: 1px solid var(--panel-border);
+      text-align: center;
+      padding: 2.5rem 1rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.4rem; }
+      .ambiance-banner { grid-template-columns: 1fr; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .lounge-content { grid-template-columns: 1fr; }
+      .lounge-card { padding: 2rem 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="brand">
+        <span class="brand-title">Mckingstown</span>
+        <span class="brand-subtitle">Gentlemen's Grooming Lounge</span>
+      </div>
+      <a href="https://wa.me/919047474800?text=Hello%20Mckingstown%2C%20I%20would%20like%20to%20reserve%20a%20grooming%20appointment." target="_blank" class="whatsapp-btn">
+        <span>Reserve Chair</span>
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="ornament">❖ ❖ ❖</span>
+      <h1>Where Tradition Meets Refined Style</h1>
+      <p>Step inside an intimate gentleman's sanctuary featuring handcrafted leather barber chairs, warm aromatic towels, and timeless razor work.</p>
+      
+      <div class="gold-divider"></div>
+
+      <a href="https://wa.me/919047474800?text=Hello%2C%20I%20would%20like%20to%20book%20a%20slot%20at%20Mckingstown%20Mens%20Grooming%20Narimedu." target="_blank" class="whatsapp-btn" style="padding: 0.9rem 2.2rem; font-size: 0.85rem;">
+        Book Your Service via WhatsApp
+      </a>
+    </section>
+
+    <section class="ambiance-banner">
+      <div class="ambiance-box">
+        <h4>Aged Brass & Leather</h4>
+        <p>Unwind in hand-stitched club chairs designed for unhurried comfort and classic ease.</p>
+      </div>
+      <div class="ambiance-box">
+        <h4>Hot Towel Rituals</h4>
+        <p>Traditional steam, essential eucalyptus extracts, and straight-razor precision detailing.</p>
+      </div>
+      <div class="ambiance-box">
+        <h4>Bespoke Consultation</h4>
+        <p>Every cut, fade, and trim is sculpted to match individual facial contours and hair grain.</p>
+      </div>
+    </section>
+
+    <section class="menu-section">
+      <div class="section-header">
+        <span class="ornament">❖</span>
+        <h2>The Grooming Menu</h2>
+        <p style="color: var(--text-muted); font-style: italic;">Curated services for the distinguished gentleman</p>
+      </div>
+
+      <div class="menu-grid">
+        <div class="menu-item">
+          <div class="menu-line">
+            <span class="item-name">The Signature Haircut</span>
+            <span class="item-price">₹350</span>
+          </div>
+          <span class="item-desc">Comprehensive scalp cleanse, custom scissor detailing, and tonic neck massage.</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-line">
+            <span class="item-name">Royal Hot Towel Shave</span>
+            <span class="item-price">₹250</span>
+          </div>
+          <span class="item-desc">Pre-shave essential oils, warm lather brush, straight-razor shave, and cooling balm.</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-line">
+            <span class="item-name">Beard Sculpt & Contouring</span>
+            <span class="item-price">₹200</span>
+          </div>
+          <span class="item-desc">Trimming, razor line finishing, and conditioning with organic beard oils.</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-line">
+            <span class="item-name">Charcoal Detox Cleanse</span>
+            <span class="item-price">₹650</span>
+          </div>
+          <span class="item-desc">Deep-pore exfoliation, blackhead clearance, and calming herbal hydration mask.</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-line">
+            <span class="item-name">Revitalizing Scalp Spa</span>
+            <span class="item-price">₹750</span>
+          </div>
+          <span class="item-desc">Therapeutic pressure point massage, deep conditioning cream, and ozone steam.</span>
+        </div>
+
+        <div class="menu-item">
+          <div class="menu-line">
+            <span class="item-name">The Executive Package</span>
+            <span class="item-price">₹1,200</span>
+          </div>
+          <span class="item-desc">Signature cut, beard sculpt, skin brightening cleanup, and relaxing head massage.</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="lounge-card">
+      <div class="lounge-content">
+        <div class="lounge-info">
+          <h3>The Madurai Lounge</h3>
+          <div class="detail-group">
+            <span class="detail-label">Address</span>
+            <span class="detail-val">Ground Floor, 12a, Pt Rajan Road, Narimedu, Madurai – 625002, Tamil Nadu</span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">Appointment Desk</span>
+            <span class="detail-val" style="color: var(--brass); font-weight: 700;">+91 90474 74800</span>
+          </div>
+          <div class="detail-group">
+            <span class="detail-label">Hours</span>
+            <span class="detail-val">Monday through Sunday: 9:00 AM – 9:00 PM</span>
+          </div>
+        </div>
+
+        <div class="reserve-cta">
+          <h4>Reserve In Advance</h4>
+          <p>Avoid lobby wait times. Direct WhatsApp confirmations guarantee immediate stylist allocation.</p>
+          <a href="https://wa.me/919047474800?text=Hi%20Mckingstown%2C%20I%20would%20like%20to%20reserve%20an%20appointment%20for%20a%20haircut%20and%20grooming." target="_blank" class="whatsapp-btn" style="width: 100%; justify-content: center;">
+            Chat on WhatsApp (+91 90474 74800)
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Mckingstown Mens Grooming, Narimedu, Madurai. Demo crafted by Rokiyh Web Design.</p>
+  </footer>
+
+</body>
+</html>
